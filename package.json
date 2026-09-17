@@ -1,0 +1,27 @@
+{
+	"name": "niems-ingest-agent",
+	"version": "2.0.0",
+	"private": false,
+	"license": "MIT",
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"test:coverage": "vitest run --coverage",
+		"typecheck": "tsc --noEmit",
+		"cf-typegen": "wrangler types",
+		"setup": "node create-folder.js"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^5.20260917.1",
+		"typescript": "^5.9.3",
+		"vitest": "^5.0.1",
+		"wrangler": "^4.133.0"
+	},
+	"dependencies": {
+		"base64-js": "^1.5.1",
+		"mustache": "^4.2.0"
+	}
+}
